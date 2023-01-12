@@ -6,8 +6,59 @@ import random
 pygame.font.init()
 
 """
-NEAT
+Neuroevolution of Augmented Topologies (NEAT) 
     -- Visualize the design for the game and network
+    -- Starts off with random movements and input values
+    -- Uses Neural Networks
+        -- Works in layers 
+        -- Has an input layer and an output layer
+    -- Make sure to load in the configuration file
+    -- Flappy Bird with Neat
+        -- Organized List
+            -- Inputs --> Bird Y, Top Pipe, Bottom Pipe
+            -- Outputs --> Jump? Do or Do not
+            -- Activation Function --> TanH == Hyperbolic Tangent Funciton
+                -- Could pick sigmoid etc...
+            -- Population Size --> 100 Birds
+                -- Could pick 10 or 1000, what suites the NEAT model
+            -- Fitness Function --> Distance
+                -- Think about how we can figure out which birds are the best
+                -- Can tweek and influence birds to move further
+            -- Max Generations --> 30 Generations
+                -- Helps with making sure there is a perfect bird
+        -- Input Layer (Eyes of the AI)
+            -- Pieces of Information that are valuable
+                -- 1. Position of the Bird
+                -- 2. Position / Distance between the Bird and the Top / Bottom Pipe
+        -- Determin whether the bird will jump or not jump
+        -- Feeds values into each layer using weights and biases
+        -- The math
+            -- E = (By * W1) + (TP * W2) + (BP * W3) + B
+                -- E == Weighted Sum
+                -- By == Bird y position
+                -- TP == Top pipe position
+                -- BP == Bottom pipe position
+                -- W1, W2, W3 == Weights of the 3 inputs
+                -- B == bias
+            -- Next is F(E)
+                -- F == Activation function "TanH"
+                    -- TanH == Squishes the value of the weighted sum to be inbetween -1 to 1
+        -- NEAT wiil take care of weights and biases
+        -- Steps
+            -- 1. Create a population of birds that are completely random
+                -- Each bird gets a neural network
+                -- Each bird starts with random weights and biases
+            -- 2. Test the birds and evaluate their fitness
+                -- Fitness is different on every game
+                -- For Flappy Bird, it is how far the bird progresses in the game
+            -- 3. Once every bird has died
+                -- Bread and mutate the for the next generation of bird
+            -- 4. Rinse and Repeat until the desired result is acquired
+    -- Will remove and add connections when going through the generations
+    -- NEAT seperates the populations into species
+        -- Species
+            -- One can be birds have 2 hidden layers as well as 3 nodes and 1 output
+            -- Another bird can have 3 nodes and 1 output
 """
 
 #Get the window width and height
