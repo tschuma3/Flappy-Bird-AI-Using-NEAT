@@ -1,7 +1,7 @@
 # VERY IMPORTANT File For NEAT Models
 [NEAT]
-fitness_criterion     = max #Takes the birds with the best fitness, can choose from min, max, or mean
-fitness_threshold     = 100 #When a member of the poplation has reached or exceeded this value, stop the program
+fitness_criterion     = max 
+fitness_threshold     = 100 
 pop_size              = 100 
 reset_on_extinction   = False 
 
@@ -9,7 +9,7 @@ reset_on_extinction   = False
 #Starting Genome
 # node activation options
 activation_default      = tanh 
-activation_mutate_rate  = 0.0 #How fast a mutation occurs
+activation_mutate_rate  = 0.0
 activation_options      = tanh
 
 # node aggregation options
@@ -47,9 +47,9 @@ node_add_prob           = 0.2
 node_delete_prob        = 0.2
 
 # network parameters
-num_hidden              = 0 #Sets the amount of hidden connections
-num_inputs              = 3 #Sets the amount of input neurons
-num_outputs             = 1 #Sets the amount of output neurons
+num_hidden              = 0 
+num_inputs              = 3 
+num_outputs             = 1 
 
 # node response options
 response_init_mean      = 1.0
@@ -74,7 +74,7 @@ compatibility_threshold = 3.0
 
 [DefaultStagnation]
 species_fitness_func = max
-max_stagnation       = 20 #How many generations we go without a change in fitness
+max_stagnation       = 20 
 species_elitism      = 2
 
 [DefaultReproduction]
